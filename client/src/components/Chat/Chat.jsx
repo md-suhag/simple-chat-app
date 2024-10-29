@@ -17,7 +17,7 @@ const Chat = () => {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState("");
 
-  const URL = "localhost:5000/";
+  const URL = "https://simple-chat-app-server-ten.vercel.app/";
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);

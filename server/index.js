@@ -12,14 +12,20 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: [
+      "http://localhost:5173",
+      "https://simple-chat-app-client-eta.vercel.app/",
+    ],
     methods: ["GET", "POST"],
   })
 );
 const server = http.createServer(app);
 const io = socketio(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://simple-chat-app-client-eta.vercel.app/",
+    ],
     methods: ["GET", "POST"],
   },
 });
