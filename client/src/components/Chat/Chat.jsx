@@ -22,7 +22,7 @@ const Chat = () => {
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
     socket = io(URL, {
-      transports: ["websocket"],
+      transports: ["polling"],
     });
     setName(name);
     setRoom(room);

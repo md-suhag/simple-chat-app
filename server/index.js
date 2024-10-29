@@ -28,6 +28,7 @@ const io = socketio(server, {
     ],
     methods: ["GET", "POST"],
   },
+  transports: ["polling"],
 });
 
 io.on("connection", (socket) => {
