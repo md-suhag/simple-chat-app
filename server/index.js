@@ -17,6 +17,7 @@ app.use(
       "https://simple-chat-app-client-eta.vercel.app/",
     ],
     methods: ["GET", "POST"],
+    credentials: true,
   })
 );
 const server = http.createServer(app);
@@ -27,6 +28,7 @@ const io = socketio(server, {
       "https://simple-chat-app-client-eta.vercel.app/",
     ],
     methods: ["GET", "POST"],
+    credentials: true,
   },
   transports: ["polling"],
 });
