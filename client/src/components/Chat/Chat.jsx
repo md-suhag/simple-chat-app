@@ -17,7 +17,7 @@ const Chat = () => {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState("");
 
-  const URL = "https://simple-chat-app-server-ten.vercel.app/";
+  const URL = "https://simple-chat-app-server-tru1.onrender.com";
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
@@ -51,7 +51,7 @@ const Chat = () => {
       socket.emit("sendMessage", message, () => setMessage(""));
     }
   };
-  console.log(message, messages);
+
   return (
     <div className="outerContainer">
       <div className="container">
