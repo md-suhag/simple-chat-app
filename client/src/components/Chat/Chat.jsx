@@ -27,7 +27,12 @@ const Chat = () => {
     setName(name);
     setRoom(room);
 
-    socket.emit("join", { name, room }, () => {});
+    socket.emit("join", { name, room }, (error) => {
+      if (error) {
+        alert(error);
+        window.location.href = "/";
+      }
+    });
 
     return () => {
       socket.emit("disconnect");
